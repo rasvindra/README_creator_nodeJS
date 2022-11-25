@@ -10,47 +10,47 @@ function init(){
             name: "projTitle",
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please describe your project in a few sentances.",
             type: "input",
-            name: "projTitle",
+            name: "projDescription",
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please provide the needed steps for any installation.",
             type: "input",
-            name: "projTitle",
+            name: "projInstall",
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please provide any Contribution Notes related to your application.",
             type: "input",
-            name: "projTitle",
+            name: "projContribute",
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please provide any notable Usage Information or Restrictions.",
             type: "input",
-            name: "projTitle",
+            name: "projUsage",
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please provide any relevant Test Data for your application.",
             type: "input",
-            name: "projTitle",
+            name: "projTest",
         },
         {
-            message: "what is the title of your Project?",
-            type: "input",
-            name: "projTitle",
+            message: "Please select your Apllication License from the list provided",
+            type: "list",
+            name: "projLicense",
+            chocies: ["MIT","MOZILLA","ISC","IBM","APACHE"]
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please provide the develeoper email(s) associated with the application.",
             type: "input",
-            name: "projTitle",
+            name: "devEmail",
         },
         {
-            message: "what is the title of your Project?",
+            message: "Please provide the Develeoper Github Username(s) associated with the application.",
             type: "input",
-            name: "projTitle",
+            name: "devGithub",
         },
-
-
+        
     ]).then ((ans) => {
         const engage = createREADME(ans)
         fs.writeFile("README.md", engage , function(err){
