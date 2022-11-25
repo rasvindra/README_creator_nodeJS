@@ -41,7 +41,7 @@ function init(){
             choices: ['MIT','MOZILLA','ISC','IBM','APACHE']
         },
         {
-            message: "Please provide the develeoper email(s) associated with the application.",
+            message: "Please provide the Develeoper email(s) associated with the application.",
             type: "input",
             name: "devEmail",
         },
@@ -53,7 +53,7 @@ function init(){
 
     ]).then ((ans) => {
         const engage = createREADME(ans)
-        fs.writeFile('README.md',engage,function(err){
+        fs.writeFile('README.md', engage , function(err){
             if(err) console.log ("error", err)
         })
     })

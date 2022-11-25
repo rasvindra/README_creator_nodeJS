@@ -13,46 +13,47 @@ function createLicense(projLicense){
 function createREADME(ans) {
     return `
     
-    # ${ans.projTitle}
-    ${createLicense(ans.projLicense)}
+# ${ans.projTitle}
 
-    ## Table of Contents
-    * [Project Description](#description)
-    * [Installation](#install)
-    * [Contribution Notes](#contribution)
-    * [Usage Info](#usage)
-    * [Test Info](#test)
-    * [Contact Info](#contact)
-    * [Deployed Link](#deployed)
-    * [Screenshot](#screenshot)
+${createLicense(ans.projLicense)}
 
-    ## Description
-    ${ans.projDescription}
+## Table of Contents
+* [Project Description](#description)
+* [Installation](#install)
+* [Contribution Notes](#contribution)
+* [Usage Info](#usage)
+* [Test Info](#test)
+* [Contact Info](#contact)
+* [Deployed Link](#deployed)
+* [Screenshot](#screenshot)
 
-    ## Install
-    ${ans.projInstall}
+## Description
+${ans.projDescription}
 
-    ## Contribution
-    ${ans.projContribute}
+## Install
+${ans.projInstall}
 
-    ## Usage
-    ${ans.projUsage}
-    
-    ## Test
-    ${ans.projTest}
+## Contribution
+${ans.projContribute}
 
-    ## Contact
-    If you have any Questions or concerns please reach me via my E-mail or through GitHub <br/>
-    ${ans.devEmail} <br/>
-    [${"github.com/"+ans.devGithub}](https://github.com/${ans.devGithub})
+## Usage
+${ans.projUsage}
 
-    ## Deployed
-    "Deployed Link goes here"
+## Test
+${ans.projTest}
 
-    ## Screenshot
-    "Screen shot goes here"
+## Contact
+If you have any Questions or concerns please reach me via my E-mail or through GitHub <br/>
+${ans.devEmail} <br/>
+[${"github.com/"+ans.devGithub}](https://github.com/${ans.devGithub})
 
-    `;
+## Deployed
+"Deployed Link goes here"
+
+## Screenshot
+"Screen shot goes here"
+`;
+
 }
 
 module.exports = createREADME
