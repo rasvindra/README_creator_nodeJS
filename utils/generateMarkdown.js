@@ -1,11 +1,3 @@
-function createREADME(ans) {
-    return`
-    
-
-
-
-    `;
-}
 
 function createLicense(projLicense){
     const licensePic = {
@@ -17,3 +9,50 @@ function createLicense(projLicense){
     }
     return licensePic[projLicense]
 }
+
+function createREADME(ans) {
+    return `
+    
+    # ${ans.projTitle}
+    ${createLicense(ans.projLicense)}
+
+    ## Table of Contents
+    * [Project Description](#description)
+    * [Installation](#install)
+    * [Contribution Notes](#contribution)
+    * [Usage Info](#usage)
+    * [Test Info](#test)
+    * [Contact Info](#contact)
+    * [Deployed Link](#deployed)
+    * [Screenshot](#screenshot)
+
+    ## Description
+    ${ans.projDescription}
+
+    ## Install
+    ${ans.projInstall}
+
+    ## Contribution
+    ${ans.projContribute}
+
+    ## Usage
+    ${ans.projUsage}
+    
+    ## Test
+    ${ans.projTest}
+
+    ## Contact
+    If you have any Questions or concerns please reach me via my E-mail or through GitHub <br/>
+    ${ans.devEmail} <br/>
+    [${"github.com/"+ans.devGithub}](https://github.com/${ans.devGithub})
+
+    ## Deployed
+    "Deployed Link goes here"
+
+    ## Screenshot
+    "Screen shot goes here"
+
+    `;
+}
+
+module.exports = createREADME

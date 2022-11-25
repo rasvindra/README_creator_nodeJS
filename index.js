@@ -38,7 +38,7 @@ function init(){
             message: "Please select your Apllication License from the list provided",
             type: "list",
             name: "projLicense",
-            chocies: ["MIT","MOZILLA","ISC","IBM","APACHE"]
+            choices: ['MIT','MOZILLA','ISC','IBM','APACHE']
         },
         {
             message: "Please provide the develeoper email(s) associated with the application.",
@@ -50,10 +50,10 @@ function init(){
             type: "input",
             name: "devGithub",
         },
-        
+
     ]).then ((ans) => {
         const engage = createREADME(ans)
-        fs.writeFile("README.md", engage , function(err){
+        fs.writeFile('README.md',engage,function(err){
             if(err) console.log ("error", err)
         })
     })
