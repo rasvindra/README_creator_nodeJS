@@ -35,18 +35,18 @@ function init(){
             name: "projTest",
         },
         {
-            message: "Please select your Apllication License from the list provided",
+            message: "Please select your Application License from the list provided",
             type: "list",
             name: "projLicense",
             choices: ['MIT','MOZILLA','ISC','IBM','APACHE']
         },
         {
-            message: "Please provide the Develeoper email(s) associated with the application.",
+            message: "Please provide the Develeoper email associated with the application.",
             type: "input",
             name: "devEmail",
         },
         {
-            message: "Please provide the Develeoper Github Username(s) associated with the application.",
+            message: "Please provide the Develeoper Github Username associated with the application.",
             type: "input",
             name: "devGithub",
         },
