@@ -1,7 +1,9 @@
+// Creating connections to NPM packages and generateMarkdown file
 const fs = require("fs");
 const inquirer = require("inquirer");
 const createREADME = require("./utils/generateMarkdown")
 
+//Question array prompted by initilization of app
 function init(){
     inquirer.prompt ([
         {
@@ -51,6 +53,7 @@ function init(){
             name: "devGithub",
         },
 
+    //takes users reponses and applies them to respectives spots in the markdown to be created
     ]).then ((ans) => {
         const engage = createREADME(ans)
         fs.writeFile('README.md', engage , function(err){
@@ -59,4 +62,5 @@ function init(){
     })
 }
 
+//calls function
 init()

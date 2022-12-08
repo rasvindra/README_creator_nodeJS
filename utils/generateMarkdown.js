@@ -1,4 +1,6 @@
 
+// Funtion that pulls badge image and renders to markdown based on user choice
+// If there is no license, return an empty string
 function createLicense(projLicense){
     const licensePic = {
         MIT:`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`,
@@ -10,6 +12,7 @@ function createLicense(projLicense){
     return licensePic[projLicense]
 }
 
+// Main function that creates markdown file that creates links to all sections of markdown that correlate to table of contents
 function createREADME(ans) {
     return `
     
@@ -55,5 +58,5 @@ ${ans.devEmail} <br/>
 `;
 
 }
-
+// exports the function to create markdown file with users answers
 module.exports = createREADME
